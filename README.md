@@ -18,8 +18,7 @@ It offers a convenient solution for managing, producing, and consuming records t
 
 
  - Windows x86_64
- 
-<br>
+
 
 # C++ Modules Link
 
@@ -341,6 +340,34 @@ AdminSubsystem->DeleteRecords(Topic, partition, Offsets, TimeoutMs);
 <img src="Guide_Images/ListTopics.png" alt="AdminBP">
 <img src="Guide_Images/DeleteRecords.png" alt="AdminBP">
 
+<br>
+
+
+
+ <br>
+
+**Note: Some faces issue with installed plugin in Engine follow steps to recompile installed plugin**
+
+1. 	Create an empty C++ project with the Engine version you wish to use.
+
+2.	Bring the plugin(s) to that C++ project
+	Create a "Plugins" folder in the C++ project's root folder.
+	Copy the plugin(s) folder(UE_5.1\Engine\Plugins\Marketplace\KafkaClientPlugin) you want to build into the newly created "Plugins" folder.
+
+3. 	Delete Binaries and Intermediate folders in plugin.
+
+4.	Compile the C++ project in Visual Studio
+	Right click on the project's uproject file and select "Generate Visual Studio project files"
+
+5.	Double click on the *.sln file to launch Visual Studio
+	In Visual Studio select Development Editor and Win64 ( same workflow as for building the engine with VS).
+
+6.	Build the project.
+
+7.	Once that's done, copy the plugin from the compiled 
+	C++	project to the Engine's plugins folder(UE_5.1\Engine\Plugins\Marketplace\KafkaClientPlugin), and overwrite any conflicting files.
+
+ 
 <br>
 
 ## Thankyou for Visiting>>>
